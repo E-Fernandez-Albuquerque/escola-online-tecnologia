@@ -1,0 +1,18 @@
+.header{
+    display: flex;
+    background-color: #100520;
+    height: 85px;
+    border-bottom: solid 1px #52DBFF;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.headerimg{
+    height: 85px;
+}
+
+#headerspan{
+    color: #52DBFF;
+    font-size: 24px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif,sans-serif;
+}

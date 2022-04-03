@@ -1,0 +1,36 @@
+.home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background-color: black;
+    background-image: url('/assets/back.jpg');
+    background-size: 100%;
+}
+
+#spantext{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.77);
+}
+
+#text{
+    font-family: sans-serif;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    color: #51ADE5;
+    font-size: 60px;
+}
+
+.homeimg{
+    width: 100%;
+    filter: opacity(50%);
+}
+
+.homespan{
+    background: rgba(0,0,0,0.9);
+}
