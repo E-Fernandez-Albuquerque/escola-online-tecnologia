@@ -2,10 +2,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #100520;
+    background-color: #fff;
+    border-top: 1px #100520 solid;
 }
 
 #footerspan{
-    color: #52DBFF;
+    color: #100520;
     font-size: 10px;
 }

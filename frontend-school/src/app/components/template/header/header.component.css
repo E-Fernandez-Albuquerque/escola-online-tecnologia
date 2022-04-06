@@ -9,6 +9,7 @@
 
 .headerimg{
     height: 85px;
+    cursor: pointer;
 }
 
 #headerspan{

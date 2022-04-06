@@ -11,7 +11,13 @@ import { NavComponent } from './components/template/nav/nav.component';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { HomeComponent } from './views/home/home.component';
-import { MatCardModule } from '@angular/material/card'
+import { MatCardModule } from '@angular/material/card';
+import { LoginComponent } from './views/login/login.component'
+import { FormsModule } from '@angular/forms';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 
 @NgModule({
   declarations: [
@@ -19,7 +25,8 @@ import { MatCardModule } from '@angular/material/card'
     HeaderComponent,
     FooterComponent,
     NavComponent,
-    HomeComponent
+    HomeComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -28,8 +35,13 @@ import { MatCardModule } from '@angular/material/card'
     MatToolbarModule,
     MatSidenavModule,
     MatListModule,
-    MatCardModule
-  ],
+    MatCardModule,
+    FormsModule,
+    MatInputModule,
+    MatFormFieldModule,
+    MatButtonModule,
+    MatCheckboxModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

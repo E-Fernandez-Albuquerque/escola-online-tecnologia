@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital@1&display=swap');
+
+#img-login{
+    width: 50%;
+}
+
+#img-login img{
+    width: 100%;
+}
+
+.global{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#form-login{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding: 0 5%;
+    box-sizing: border-box;
+}
+
+#form-login h2{
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    color: #673AB7;
+}
+
+#form-login mat-form-field{
+    margin: 10px 0;
+}
+
+#form-login span{
+    margin-top: 5px;
+    text-align: end;
+    color: #673AB7;
+    
+}
