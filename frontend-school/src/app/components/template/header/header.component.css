@@ -1,8 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital@1&display=swap');
+
 .header{
     display: flex;
     background-color: #100520;
     height: 85px;
-    border-bottom: solid 1px #52DBFF;
+    border-bottom: solid 1px #8C52FF;
     justify-content: space-between;
     align-items: center;
 }
@@ -12,8 +14,38 @@
     cursor: pointer;
 }
 
+#menu{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    height: 100%;
+}
+
+#menu div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 15%;
+    transition: all ease 0.4s;
+    height: 100%;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+#menu div:hover{
+    background-color: #8C52FF;
+}
+
+.span-menu{
+    font-size: 19px;
+    color: white;
+    font-family: 'Raleway', sans-serif;
+}
+
 #headerspan{
-    color: #52DBFF;
+    color: #8C52FF;
     font-size: 24px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif,sans-serif;
 }
