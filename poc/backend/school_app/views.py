@@ -6,7 +6,10 @@ from school_app.models import Curso
 
 from school_app.serializer import CursoSerializer
 
+class CursoList(generics.ListCreateAPIView):
+    queryset = Curso.objects.all()
+    serializer_class = CursoSerializer
 
 class CursoDetail(generics.RetrieveUpdateAPIView):
     queryset = Curso.objects.all()
-    serialize_class = CursoSerializer
+    serializer_class = CursoSerializer

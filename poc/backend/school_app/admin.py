@@ -1,3 +1,4 @@
+import curses
 from django.contrib import admin
 from school_app.models import Curso
 
