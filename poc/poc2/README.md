@@ -14,7 +14,7 @@ Ativar o ambiente virtual: `venv/Scripts/activate` (Windows) ou `source venv/bin
 
 Instalar os requerimentos do projeto, presentes no arquivo [requirements.txt]: `pip install -r requirements.txt`
 
-#### Em caso de erro durante a instalação dos pacotes presentes em 'requirements.txt', pode ser necessário realizar mudança da versão do gerenciador de pacotes do Python por meio do comando: ``py -m pip install pip=21` (versão que se mostrou funcional, inicialmente).
+#### Em caso de erro durante a instalação dos pacotes presentes em 'requirements.txt', pode ser necessário realizar mudança da versão do gerenciador de pacotes do Python por meio do comando: `py -m pip install pip=21` (versão que se mostrou funcional, inicialmente).
 
 Acessar o diretório /loja
 
