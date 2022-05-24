@@ -17,3 +17,9 @@
 | :-----------: | :----------: | :-----------------: |
 |    Angular    |    Django    |       MongoDB       |
 |   Bootstrap   |              |   MySQL / MariaDB   |
+
+
+
+### Apresentação da Prova de Conceito: 
+
+https://www.canva.com/design/DAFBJ-EwkME/wAOmtUCjZTpaSCdr9V-wWw/edit?utm_content=DAFBJ-EwkME&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
