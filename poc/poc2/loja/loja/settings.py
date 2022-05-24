@@ -39,7 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'main',
     'users',
-    'pagseguro'
+    'pagseguro',
+    'channels',
+    'chat'
 ]
 
 CORS_ORIGIN_ALLOW_ALL = True
@@ -142,3 +144,14 @@ PAGSEGURO_EMAIL = 'efernandezalbuq@gmail.com'
 PAGSEGURO_TOKEN = '5F8AF3447E734CF58A12E9ADF98CB72B'
 PAGSEGURO_SANDBOX = True
 PAGSEGUR_LOG_IN_MODEL = True
+
+ASGI_APPLICATION = 'loja.asgi.application'
+
+CHANNEL_LAYERS = {
+    'default': {
+        'BACKEND': 'channels_redis.core.RedisChannelLayer',
+        'CONFIG': {
+            "hosts": [('127.0.0.1', 6379)],
+        },
+    },
+}
