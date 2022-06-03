@@ -2,7 +2,9 @@ import React, { Component } from "react";
 import { BrowserRouter as Router, Switch, Route, Link, Redirect } from "react-router-dom";
 import { Grid, Button, ButtonGroup, Typography } from '@material-ui/core'
 import Menu from "./Menu";
-import MaisUmaPagina from "./MaisUmaPagina";
+import Login from "./Login";
+import About from "./About";
+import Courses from "./Courses";
 
 
 export default class HomePage extends Component {
@@ -31,7 +33,9 @@ export default class HomePage extends Component {
                         <Route exact path="/" render={() => {
                             return this.renderHomePage()
                         }}></Route>
-                        <Route path="/nova" component={MaisUmaPagina}></Route>
+                        <Route path="/quem-somos" component={About}></Route>
+                        <Route path="/login" component={Login}></Route>
+                        <Route path="/cursos" component={Courses}></Route>
                     </Switch>
                 </Router>
             </>

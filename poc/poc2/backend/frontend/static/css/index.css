@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
 html, body{
     height: 100%;
     margin: 0;
@@ -24,6 +26,7 @@ html, body{
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+    width: 36%;
 }
 
 .center div{
@@ -34,6 +37,7 @@ html, body{
     font-size: 14px;
     transition: all 0.4s ease;
     height: 100%;
+    width: 100%;
     cursor: pointer;
 }
 
@@ -42,6 +46,8 @@ html, body{
 }
 
 .center div a{
+    font-family: 'Open Sans', sans-serif;
+    color: white;
     text-decoration: none;
 }
 
@@ -60,10 +66,71 @@ html, body{
     display: flex;
     align-items: center;
     justify-content: center;
-    
 }
 
 .login Button{
     width: 100px;
     margin-right: 20px;
+}
+
+.container-login{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+
+.login-image img{
+    height: 100vh;
+    max-width: 100vh;
+    min-height: 300px;
+    min-width: 300px;
+}
+
+.login-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.login-input{
+    margin: 10px 0 !important;
+    width: 70%;
+}
+
+.login-button{
+    height: 50px !important;
+    width: 70% !important;
+    margin: 10px;
+}
+
+@media (max-width: 1024px) {
+    .main {
+        width: 90%;
+    }
+
+    .login-image{
+        display: none;
+    }
+
+    .login-input, .login-button{
+        width: 50% !important;
+    }
+}
+
+@media (max-width:700px){
+    .main{
+        width: 90%;
+    }
+
+    .login-image img{
+        display: none;
+    }
+
+    .login-input, .login-button{
+        width: 50% !important;
+    }
 }
