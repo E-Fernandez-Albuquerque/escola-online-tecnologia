@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Menu from './Menu'
-import { Button, TextField } from '@material-ui/core'
+import { Button, TextField, Typography } from '@material-ui/core'
 
 
 
@@ -25,9 +25,11 @@ export default class Login extends Component {
                     <img src='../static/images/login.jpg'></img>
                 </div>
                 <div className='login-form'>
+                    <Typography className='login-text' variant='h4' component='h4' align='center'>Acessando o mundo da <b>Tecnologia</b></Typography>
                     <TextField className="login-input" label='Email' placeholder='example@mail.com' value={this.state.email} variant='outlined' onChange={this.handleEmail}></TextField>
                     <TextField className="login-input" label='Senha' type="password" placeholder="Senha" value={this.state.password} variant='outlined' onChange={this.handlePswd}></TextField>
                     <Button className="login-button" variant='contained' color='primary' onClick={this.loginButtonClicked}>Login</Button>
+                    <a id='signup' href='/cadastro'>Sem conta? Cadastre-se aqui!</a>
                 </div>
             </div>
 
@@ -47,6 +49,8 @@ export default class Login extends Component {
     }
 
     loginButtonClicked() {
-        console.log(this.state)
+        fetch('/user/login')
+        .then((response) => response.json())
+        .then(console.log(this.state))
     }
 }

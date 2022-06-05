@@ -5,7 +5,7 @@ import Menu from "./Menu";
 import Login from "./Login";
 import About from "./About";
 import Courses from "./Courses";
-
+import SignUp from "./SignUp";
 
 export default class HomePage extends Component {
     constructor(props) {
@@ -36,6 +36,7 @@ export default class HomePage extends Component {
                         <Route path="/quem-somos" component={About}></Route>
                         <Route path="/login" component={Login}></Route>
                         <Route path="/cursos" component={Courses}></Route>
+                        <Route path='/cadastro' component={SignUp}></Route>
                     </Switch>
                 </Router>
             </>
