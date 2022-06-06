@@ -54,27 +54,27 @@ def logout_site(request):
     return redirect('/')
     
 
-
-
 #ERRO (BAD REQUEST)
 class AccountLoginView(APIView):
     serializer_class = UserSerializer
-
     def post(self, request, format=None):
-        if not self.request.session.exists(self.request.session.session_key):
-            self.request.session.create()
-        
+
         serializer = self.serializer_class(data=request.data)
-        if serializer.is_valid():
-            username = serializer.data.get('username')
-            email = serializer.data.get('email')
-            password = serializer.data.get('password')
-            user = authenticate(username=username, password=password)
-            if user:
+        data = request.data
+
+        username = data.get('username')
+        password = data.get('password')
+
+        user = authenticate(username=username, password=password)
+
+        if user is not None:
+            if user.is_active:
                 login(request, user)
-                return Response({'login', 'login com sucesso'}, status=status.HTTP_200_OK)
-            return Response({'Falha': 'credenciais invalidas'}, status=status.HTTP_200_OK)
-        return Response({'error': 'Falha'}, status=status.HTTP_400_BAD_REQUEST)
+                return Response({'Sucess': 'Usuário logado'}, status=status.HTTP_200_OK)
+            else:
+                return Response({'Not found': 'Usuário não localizado'}, status=status.HTTP_404_NOT_FOUND)
+        else:
+            return Response({'Bad request': 'Erro'}, status=status.HTTP_400_BAD_REQUEST)
 #ERRO (BAD REQUEST)
 
 

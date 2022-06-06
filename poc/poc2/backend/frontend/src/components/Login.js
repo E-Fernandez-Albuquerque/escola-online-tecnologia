@@ -8,10 +8,10 @@ export default class Login extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            email: "",
+            username: "",
             password: "",
         }
-        this.handleEmail = this.handleEmail.bind(this)
+        this.handleUsername = this.handleUsername.bind(this)
         this.handlePswd = this.handlePswd.bind(this)
         this.loginButtonClicked = this.loginButtonClicked.bind(this)
     }
@@ -26,7 +26,7 @@ export default class Login extends Component {
                 </div>
                 <div className='login-form'>
                     <Typography className='login-text' variant='h4' component='h4' align='center'>Acessando o mundo da <b>Tecnologia</b></Typography>
-                    <TextField className="login-input" label='Email' placeholder='example@mail.com' value={this.state.email} variant='outlined' onChange={this.handleEmail}></TextField>
+                    <TextField className="login-input" label='Usuário' placeholder='Nome de usuário' value={this.state.username} variant='outlined' onChange={this.handleUsername}></TextField>
                     <TextField className="login-input" label='Senha' type="password" placeholder="Senha" value={this.state.password} variant='outlined' onChange={this.handlePswd}></TextField>
                     <Button className="login-button" variant='contained' color='primary' onClick={this.loginButtonClicked}>Login</Button>
                     <a id='signup' href='/cadastro'>Sem conta? Cadastre-se aqui!</a>
@@ -36,9 +36,9 @@ export default class Login extends Component {
         )
     }
 
-    handleEmail(e) {
+    handleUsername(e) {
         this.setState({
-            email: e.target.value
+            username: e.target.value
         })
     }
 
@@ -49,8 +49,15 @@ export default class Login extends Component {
     }
 
     loginButtonClicked() {
-        fetch('/user/login')
-        .then((response) => response.json())
-        .then(console.log(this.state))
+        const requestOptions = {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+              username: this.state.email,
+              password: this.state.password,
+            }),
+          };
+        fetch('/user/login', requestOptions)
+        .then(() => this.props.history.push('/'))
     }
 }
