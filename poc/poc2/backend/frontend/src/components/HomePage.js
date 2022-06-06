@@ -14,13 +14,20 @@ export default class HomePage extends Component {
 
     renderHomePage() {
         return (
-            <Grid container spacing={3}>
-                <Grid item xs={12} align='center'>
-                    <Typography variant='h3' component='h3'>
-                        Escola online de tecnologia
-                    </Typography>
-                </Grid>
-            </Grid>
+            <div className="home-container">
+                <div className='home-container-1'>
+                    <div className='home-container-2'>
+                        <img src='./static/images/logo.png'></img>
+                        <h2>Somos uma escola online focada no ensino da programação</h2>
+                        <h2>Visamos a equidade no ensino por meio de cursos acessíveis e de qualidade</h2>
+                        <Button className="home-about" variant='contained' color='white'>Conhecer</Button>
+                    </div>
+                    
+                    <img src="./static/images/home/brain.png"></img>
+                    
+                </div>
+            </div>
+            
         )
     }
 

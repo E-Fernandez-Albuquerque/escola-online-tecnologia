@@ -26,7 +26,7 @@ export default class SignUp extends Component {
         return (
             <div className='container-login'>
                 <div className='login-image'>
-                    <img src='../static/images/login.jpg'></img>
+                    <img src='../static/images/login/login.jpg'></img>
                 </div>
                 <div className='login-form'>
                     <Typography className='login-text' variant='h4' component='h4' align='center'>Crie a sua conta</Typography>

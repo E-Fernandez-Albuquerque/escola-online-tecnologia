@@ -125,6 +125,46 @@ html, body{
     width: 70%;
 }
 
+
+.home-container{
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0,0,0,0.5);
+
+
+}
+
+.home-container-1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 100vh;
+    background-image: linear-gradient(to bottom, #0a1428, #0a2041, #082c5c, #033877, #004494, #05489f, #0e4ba9, #174fb4, #204baf, #2747aa, #2c43a4, #303f9f);    
+}
+
+.home-container-1 img{
+    height: 100vh;
+}
+
+.home-container-2{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.home-container-2 img{
+    height: 36vh;
+}
+
+.home-container-2 h2{
+    color: white;
+    font-family: 'Fresca', sans-serif !important;
+    text-align: center;
+    padding: 0px 10px;
+}
+
 @media (max-width: 1024px) {
     .main {
         width: 90%;
