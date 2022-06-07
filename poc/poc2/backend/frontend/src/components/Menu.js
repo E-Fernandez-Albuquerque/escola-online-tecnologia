@@ -17,14 +17,16 @@ export default class Menu extends Component {
     render() {
         return (
             <div className="menu">
-                <div></div>
+                <div className='menu-logo'>
+                    <img src='./static/images/onlyLogo.png'></img>
+                </div>
                 <div className="center">
                     <div><a className="menu-item" href="/">Home</a></div>
                     <div><a className="menu-item" href='/cursos'>Cursos</a></div>
                     <div><a className="menu-item" href='/quem-somos'>Quem somos</a></div>
                 </div>
                 <div className="login">
-                    <Button variant='contained' color='primary' onClick={() => 
+                    <Button className='home-button'variant='contained' color='primary' onClick={() => 
                         location.href = '/login'
                     }>Login</Button>
                 </div>

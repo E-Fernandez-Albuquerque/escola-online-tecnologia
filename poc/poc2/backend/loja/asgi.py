@@ -9,7 +9,7 @@ import chat.routing
 
 
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'loja.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'loja.settings.base')
 
 application = ProtocolTypeRouter({
   "http": get_asgi_application(),

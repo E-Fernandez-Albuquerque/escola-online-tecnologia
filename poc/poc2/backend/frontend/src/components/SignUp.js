@@ -61,7 +61,7 @@ export default class SignUp extends Component {
 
     handlePswdConfirmation(e){
         if (this.state.password != e.target.value){
-            this.setState({error: "Senha não conferem"})
+            this.setState({error: "Por favor, verifique a senha. Elas precisam ser iguais."})
         } else {
             this.setState({error: ""})
         }

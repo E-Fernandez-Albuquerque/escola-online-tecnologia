@@ -20,11 +20,19 @@ export default class HomePage extends Component {
                         <img src='./static/images/logo.png'></img>
                         <h2>Somos uma escola online focada no ensino da programação</h2>
                         <h2>Visamos a equidade no ensino por meio de cursos acessíveis e de qualidade</h2>
-                        <Button className="home-about" variant='contained' color='white'>Conhecer</Button>
+                        <Button className="home-about" variant='contained' color='white' onClick={() => 
+                        location.href = '/quem-somos'
+                    }>Conhecer</Button>
                     </div>
-                    
                     <img src="./static/images/home/brain.png"></img>
+                </div>
+
+                <div className="home-container-3">
                     
+                    <img src="./static/images/home/homepage.jpg"></img>
+                    <div className="home-courses-title">
+                        <h2>Nossos cursos</h2>
+                    </div>
                 </div>
             </div>
             
