@@ -44,7 +44,8 @@ INSTALLED_APPS = [
     'chat',
     'corsheaders',
     'frontend.apps.FrontendConfig',
-    'rest_framework'
+    'rest_framework',
+    'courses',
 ]
 
 CORS_ORIGIN_ALLOW_ALL = True

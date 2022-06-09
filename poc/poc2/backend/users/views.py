@@ -1,6 +1,3 @@
-import email
-from multiprocessing.reduction import send_handle
-from sys import api_version
 from django.http import HttpResponse
 from django.shortcuts import render
 from .serializers import UserSerializer
@@ -10,8 +7,8 @@ from django.contrib.auth.models import User
 
 from django.contrib.auth import authenticate, login, logout
 from django.shortcuts import redirect
-from django.http import JsonResponse
-from rest_framework import generics, status
+#from django.http import JsonResponse
+from rest_framework import status
 from rest_framework.views import APIView
 from rest_framework.response import Response
 
@@ -54,7 +51,7 @@ def logout_site(request):
     return redirect('/')
     
 
-#ERRO (BAD REQUEST)
+#OK - FUNCIONAL
 class AccountLoginView(APIView):
     serializer_class = UserSerializer
     def post(self, request, format=None):
@@ -75,7 +72,7 @@ class AccountLoginView(APIView):
                 return Response({'Not found': 'Usuário não localizado'}, status=status.HTTP_404_NOT_FOUND)
         else:
             return Response({'Bad request': 'Erro'}, status=status.HTTP_400_BAD_REQUEST)
-#ERRO (BAD REQUEST)
+#OK - FUNCIONAL
 
 
 #OK - FUNCIONAL
