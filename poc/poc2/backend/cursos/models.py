@@ -6,16 +6,16 @@ class Course(models.Model):
     description = models.TextField()
     price = models.DecimalField(max_digits=6, decimal_places=2 ,null=False)
     slug = models.SlugField(max_length=255, unique=True, null=False)
-    image = models.ImageField(default='null', upload_to = './static/courses/coursesImages/')
-    presentationVideo = models.FileField(default='null', upload_to='./static/courses/')
+    image = models.ImageField(default='null', upload_to = 'frontend/static/images/courseImage')
+    presentationVideo = models.FileField(default='null', upload_to='frontend/static/images/courseImage')
 
     def url_correction(self):
         url = str(self.image)
         return url[4:]
 
-    def file_url_correction(self):
-        url = str(self.file)
-        return url[4:]
+    def image_url(self):
+        url = str(self.image)
+        return url[22:]
 
     def video_url_correction(self):
         url = str(self.video)

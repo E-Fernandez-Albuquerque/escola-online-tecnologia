@@ -23,7 +23,7 @@
                 {% for course in course_list %}
                     <div class="course-container">
                         <div class="course-image">
-                            <img src='../../static/courseImages/teste.png'>
+                            <img src="{% static "images" %}{{course.image_url}}">
                         </div>
                         <div class="course-details">
                             <div class="course-title-price">

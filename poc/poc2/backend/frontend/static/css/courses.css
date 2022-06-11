@@ -10,14 +10,14 @@
 
 .courses-container-title{
     font-family: sans-serif;
-    width: 80%;
+    width: 93%;
     color: #0A1428;
 }
 
 .courses{
     display: flex;
     flex-wrap: wrap;
-    width: 80%;
+    width: 93%;
 }
 
 .course-container{
