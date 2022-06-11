@@ -45,7 +45,7 @@ INSTALLED_APPS = [
     'corsheaders',
     'frontend.apps.FrontendConfig',
     'rest_framework',
-    'courses',
+    'cursos',
 ]
 
 CORS_ORIGIN_ALLOW_ALL = True

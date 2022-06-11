@@ -18,7 +18,7 @@ export default class Menu extends Component {
         return (
             <div className="menu">
                 <div className='menu-logo'>
-                    <img src='./static/images/onlyLogo.png'></img>
+                    <img src='../../static/images/onlyLogo.png'></img>
                 </div>
                 <div className="center">
                     <div><a className="menu-item" href="/">Home</a></div>

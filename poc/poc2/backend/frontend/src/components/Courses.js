@@ -11,9 +11,7 @@ export default class Courses extends Component {
 
     render() {
         return (
-            <div className='image'>
-                <img src={this.state.imageCourse}></img>
-            </div>
+            <></>
         )
     }
 }
