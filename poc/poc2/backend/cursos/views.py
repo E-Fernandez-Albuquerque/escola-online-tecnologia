@@ -16,6 +16,10 @@ from rest_framework.response import Response
 from .models import Course
 
 from django.views.generic.list import ListView
+from django.views.generic.detail import DetailView
 
 class CoursesView(ListView):
+    model = Course
+
+class CourseDetailView(DetailView):
     model = Course

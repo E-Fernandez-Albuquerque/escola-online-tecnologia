@@ -22,7 +22,7 @@ class Course(models.Model):
         return url[4:]
 
     def get_absolute_url(self):
-        return reverse('main:product_view', kwargs={'slug': self.slug})
+        return reverse('cursos:course_details', kwargs={'slug': self.slug})
 
 
 class CourseLesson(models.Model):

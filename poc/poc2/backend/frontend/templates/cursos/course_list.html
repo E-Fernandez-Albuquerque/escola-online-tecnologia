@@ -16,9 +16,8 @@
     <div class="main-courses">
         <div id="app"></div>
         <div class="courses-container">
-            <h2 class="courses-container-title">
-                Nossos cursos:
-            </h2>
+            <img class='courses-container-title' src="{% static "images/banners/cursos.png" %}">
+            
             <div class="courses">
                 {% for course in course_list %}
                     <div class="course-container">
@@ -26,20 +25,19 @@
                             <img src="{% static "images" %}{{course.image_url}}">
                         </div>
                         <div class="course-details">
-                            <div class="course-title-price">
-                                <h3 class="course-title">{{ course.title }}</h3>
-                                <h4 class="course-price">R${{ course.price }}</h4>
-                            </div>
-                            
+                            <a class="course-title">{{ course.title }}</a>
                             <p class="course-description">{{ course.description}}</p>
+                            <h4 class="course-price">R${{ course.price }}</h4>
+                            <div class="button">
+                                <a href="{{ course.get_absolute_url }}">Conhecer</a>
+                            </div>
                         </div>
-                        
-                        
                     </div>
                 {% endfor %}
             </div>
         </div>
     </div>
     <script src="{% static "frontend/main.js" %}"></script>
+    <script src="{% static "js/courses.js" %}"></script>
 </body>
 </html>

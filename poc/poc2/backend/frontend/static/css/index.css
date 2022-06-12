@@ -143,7 +143,7 @@ body{
 .home-container{
     display: flex;
     flex-direction: column;
-    background-color: #201050;
+    background-color: #0A1428;
     /* background-image: linear-gradient(to bottom, #0a1428, #0a2041, #082c5c, #033877, #004494, #05489f, #0e4ba9, #174fb4, #204baf, #2747aa, #2c43a4, #303f9f);     */
 }
 
