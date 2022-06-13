@@ -11,7 +11,7 @@
     <link rel="stylesheet" type="text/css" href="{% static "css/index.css" %}" />
     <link rel="stylesheet" type="text/css" href="{% static "css/courses.css" %}" />
     <link rel="stylesheet" type="text/css" href="{% static "css/courses_detail.css" %}" />
-    <link rel="stylesheet" type="text/css" href="{% static "css/lesson_list.css" %}" />
+    <link rel="stylesheet" type="text/css" href="{% static "css/courses_mural.css" %}" />
 
 </head>
 <body>
@@ -27,20 +27,20 @@
             </div>
         </div>
         
-
-        {% for lesson in object.lesson.all %}
-        <div class="lessons-container">
-            <div class="lesson-container">
-                <img class="lesson-thumbnail" src="{% static "images" %}{{lesson.thumbnail_url}}">
-                <div class="lesson">
-                    <h3 class="lesson-title">{{ lesson.title }}</h3>
-                    <p class="lesson-description">{{ lesson.description }}</p>
+        {% for comment in object.comment.all %}
+        <div class="comments-background">
+            <div class="comments-container">
+                <div class="comment-author">
+                    <img class="author-photo" src="{% static "images" %}/icons/profile.png">
+                    <span class="author-username">{{ comment.author }}</span>
                 </div>
-                
-                <div class="button btn-lesson">
-                    <a>Assistir</a>
+                <div class="comment-text">
+                    <p class="comment-text-p">{{ comment.text }}</p>
                 </div>
+                <div class="comment-date">
+                    <span>Postado em: {{ comment.date }}</span>
                 </div>
+            </div>
         </div>
         
         {% endfor %}

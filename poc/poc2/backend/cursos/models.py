@@ -1,6 +1,8 @@
 from email.policy import default
 from django.db import models
 from django.urls import reverse
+from django.contrib.auth.models import User
+from datetime import datetime
 
 class Course(models.Model):
     title = models.CharField(max_length=255, null=False, unique=True)
@@ -49,3 +51,14 @@ class CourseLesson(models.Model):
     def thumbnail_url(self):
         url = str(self.image)
         return url[22:]
+
+
+class CoursePosts(models.Model):
+    id = models.IntegerField(primary_key=True)
+    author = models.ForeignKey(User, related_name='comment', on_delete=models.CASCADE)
+    course = models.ForeignKey(Course, related_name='comment', on_delete=models.CASCADE)
+    text = models.TextField()
+    date = models.DateTimeField(default=datetime.now)
+
+    def __str__(self):
+        return self.text

@@ -23,3 +23,7 @@ class CoursesView(ListView):
 
 class CourseDetailView(DetailView):
     model = Course
+
+class CourseMuralDetailView(DetailView):
+    model = Course
+    template_name = 'cursos/course_mural.html'
