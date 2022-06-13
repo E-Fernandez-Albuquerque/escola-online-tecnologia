@@ -11,6 +11,7 @@
     <link rel="stylesheet" type="text/css" href="{% static "css/index.css" %}" />
     <link rel="stylesheet" type="text/css" href="{% static "css/courses.css" %}" />
     <link rel="stylesheet" type="text/css" href="{% static "css/courses_detail.css" %}" />
+    <link rel="stylesheet" type="text/css" href="{% static "css/lesson_list.css" %}" />
 
 </head>
 <body>
@@ -20,7 +21,7 @@
             <img class='banner' src="{% static "images" %}{{course.banner_url}}">
             {% if user.is_authenticated %}
             <div class="course-menu">
-                <div class="item"><a class="item-a">Aulas</a></div>
+                <div class="item"><a class="item-a" href="{{ course.get_absolute_url }}">Aulas</a></div>
                 <div class="item"><a class="item-a">Mural</a></div>
                 <div class="item"><a class="item-a">Avaliações</a></div>
             </div>
@@ -28,7 +29,20 @@
         
 
         {% for lesson in object.lesson.all %}
-        <span>{{ lesson.title }}</span>
+        <div class="lessons-container">
+            <div class="lesson-container">
+                <img class="lesson-thumbnail" src="{% static "images" %}{{lesson.thumbnail_url}}">
+                <div class="lesson">
+                    <h3 class="lesson-title">{{ lesson.title }}</h3>
+                    <p class="lesson-description">{{ lesson.description }}</p>
+                </div>
+                
+                <div class="button btn-lesson">
+                    <a>Assistir</a>
+                </div>
+                </div>
+        </div>
+        
         {% endfor %}
         
         {% else %}

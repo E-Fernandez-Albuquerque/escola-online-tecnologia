@@ -41,6 +41,11 @@ class CourseLesson(models.Model):
     description = models.TextField()
     slug = models.SlugField(max_length=255, unique=True, null=False)
     video = models.FileField(default='null', upload_to='frontend/static/video/courseLesson')
+    image = models.ImageField(default='null', upload_to='frontend/static/images/courseThumbnail')
 
     def __str__(self):
         return  f'{self.course} / {self.title}'
+
+    def thumbnail_url(self):
+        url = str(self.image)
+        return url[22:]

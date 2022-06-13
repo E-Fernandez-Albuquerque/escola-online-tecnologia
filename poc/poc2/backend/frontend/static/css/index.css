@@ -97,7 +97,7 @@ body{
 
 
 .login-image img{
-    height: 100vh;
+    height: 92vh;
     max-width: 100vh;
     min-height: 300px;
     min-width: 300px;
@@ -127,7 +127,7 @@ body{
     font-size: 36px !important;
     padding-top: 50px;
     margin: 10px !important;
-    color: #EF0076;
+    color: #0A1428;
 }
 
 #signup {
