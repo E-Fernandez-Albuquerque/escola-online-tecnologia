@@ -1,3 +1,4 @@
+from email.policy import default
 from django.db import models
 from django.urls import reverse
 
@@ -7,7 +8,11 @@ class Course(models.Model):
     price = models.DecimalField(max_digits=6, decimal_places=2 ,null=False)
     slug = models.SlugField(max_length=255, unique=True, null=False)
     image = models.ImageField(default='null', upload_to = 'frontend/static/images/courseImage')
-    presentationVideo = models.FileField(default='null', upload_to='frontend/static/images/courseImage')
+    course_banner = models.ImageField(default='null', upload_to='frontend/static/images/courseBanner')
+    presentationVideo = models.FileField(default='null', upload_to='frontend/static/images/courseVideo')
+
+    def __str__(self):
+        return self.title
 
     def url_correction(self):
         url = str(self.image)
@@ -15,6 +20,10 @@ class Course(models.Model):
 
     def image_url(self):
         url = str(self.image)
+        return url[22:]
+
+    def banner_url(self):
+        url = str(self.course_banner)
         return url[22:]
 
     def video_url_correction(self):
@@ -26,8 +35,12 @@ class Course(models.Model):
 
 
 class CourseLesson(models.Model):
-    course = models.ForeignKey(Course, on_delete=models.CASCADE)
+    id = models.IntegerField(primary_key=True)
+    course = models.ForeignKey(Course, related_name='lesson', on_delete=models.CASCADE)
     title = models.CharField(max_length=255)
     description = models.TextField()
     slug = models.SlugField(max_length=255, unique=True, null=False)
-    video = models.FileField(default='null', upload_to='../frontend/static/courses/'+str(course)+'/lessons')
+    video = models.FileField(default='null', upload_to='frontend/static/video/courseLesson')
+
+    def __str__(self):
+        return  f'{self.course} / {self.title}'

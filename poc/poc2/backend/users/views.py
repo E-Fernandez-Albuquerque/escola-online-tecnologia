@@ -67,7 +67,7 @@ class AccountLoginView(APIView):
         if user is not None:
             if user.is_active:
                 login(request, user)
-                return Response({'Sucess': 'Usuário logado'}, status=status.HTTP_200_OK)
+                return Response({'Sucesso': 'Usuário logado'}, status=status.HTTP_200_OK)
             else:
                 return Response({'Not found': 'Usuário não localizado'}, status=status.HTTP_404_NOT_FOUND)
         else:

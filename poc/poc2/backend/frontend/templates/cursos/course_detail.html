@@ -5,8 +5,54 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    {% load static %}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+    <link rel="stylesheet" type="text/css" href="{% static "css/index.css" %}" />
+    <link rel="stylesheet" type="text/css" href="{% static "css/courses.css" %}" />
+    <link rel="stylesheet" type="text/css" href="{% static "css/courses_detail.css" %}" />
+
 </head>
 <body>
-    <h1>{{course.title}}</h1>
+    <div class="main-courses">
+        <div id="app"></div>
+        <div class="course-content">
+            <img class='banner' src="{% static "images" %}{{course.banner_url}}">
+            {% if user.is_authenticated %}
+            <div class="course-menu">
+                <div class="item"><a class="item-a">Aulas</a></div>
+                <div class="item"><a class="item-a">Mural</a></div>
+                <div class="item"><a class="item-a">Avaliações</a></div>
+            </div>
+        </div>
+        
+
+        {% for lesson in object.lesson.all %}
+        <span>{{ lesson.title }}</span>
+        {% endfor %}
+        
+        {% else %}
+        <div class="course-intro">
+            <h2>Bem-vindo ao curso de {{ course.title }} </h2>
+            <div class="course-total-description">
+                <h4>Descrição</h4>
+                <p>{{ course.description }}</p>
+            </div>
+            <div class="course-info">
+                <div class="course-info-item">
+                    <h4>Quantidade de aulas disponíveis</h4>
+                    <span>{{ object.lesson.all.count }}</span>  
+                </div>
+                <div class="course-info-item">
+                    <h4>Investimento</h4>
+                    <span>R${{ object.price }}</span>
+                </div>
+            </div>
+            <div class="button btn-buy"><a>Comprar</a></div>
+        </div>
+        {% endif %}
+    </div>
+    <script src="{% static "frontend/main.js" %}"></script>
+    <script src="{% static "js/courses.js" %}"></script>
 </body>
 </html>

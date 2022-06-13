@@ -24,15 +24,7 @@ export default class HomePage extends Component {
                         location.href = '/quem-somos'
                     }>Conhecer</Button>
                     </div>
-                    <img src="./static/images/home/brain.png"></img>
-                </div>
-
-                <div className="home-container-3">
-                    
-                    <img src="./static/images/home/homepage.jpg"></img>
-                    <div className="home-courses-title">
-                        <h2>Nossos cursos</h2>
-                    </div>
+                    <img className='landing-image' src="./static/images/home/brain.png"></img>
                 </div>
             </div>
             

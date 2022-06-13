@@ -8,4 +8,4 @@ class CourseAdmin(admin.ModelAdmin):
 
 @admin.register(CourseLesson)
 class ProductAdmin(admin.ModelAdmin):
-    list_display = ('course', 'title', 'description', 'slug', 'video')
+    list_display = ('id', 'course', 'title', 'description', 'slug', 'video')

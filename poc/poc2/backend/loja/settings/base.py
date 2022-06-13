@@ -89,7 +89,7 @@ WSGI_APPLICATION = 'loja.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'learn_django',
+        'NAME': 'bad_request',
         'USER': 'root', 
         'PASSWORD': '',
         'HOST': 'localhost',

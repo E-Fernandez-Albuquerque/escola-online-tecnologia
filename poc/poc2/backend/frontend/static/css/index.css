@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Fresca&display=swap');
 
+
 html, body{
     height: 100%;
     margin: 0;
@@ -21,7 +22,7 @@ body{
 .menu{
     display: flex;
     justify-content: space-between;
-    height: 60px;
+    max-height: 60px;
     background-color: rgb(10,20,40);
 }
 
@@ -40,9 +41,9 @@ body{
 .center{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
-    width: 36%;
+    width: 50%;
 }
 
 .center div{
@@ -51,9 +52,8 @@ body{
     justify-content: center;
     color: white;
     font-size: 14px;
+    font-weight: 900;
     transition: all 0.4s ease;
-    height: 100%;
-    width: 100%;
     cursor: pointer;
 }
 
@@ -74,8 +74,7 @@ body{
 }
 
 .menu-item{
-    padding: 10px;
-    
+    padding: 20px 40px;
 }
 
 .login{
@@ -143,8 +142,8 @@ body{
 .home-container{
     display: flex;
     flex-direction: column;
-    background-color: #0A1428;
-    /* background-image: linear-gradient(to bottom, #0a1428, #0a2041, #082c5c, #033877, #004494, #05489f, #0e4ba9, #174fb4, #204baf, #2747aa, #2c43a4, #303f9f);     */
+    background: rgb(0,254,251);
+    background: linear-gradient(90deg, rgba(4,87,188,1) 0%, rgba(0,254,251,1) 100%);
 }
 
 .home-container-1{
@@ -164,8 +163,7 @@ body{
     flex-direction: column;
     width: 50%;
     align-items: center;
-    justify-content: flex-start;
-    margin-top: 100px;
+    justify-content: center;
 }
 
 .home-container-2 img{
@@ -206,6 +204,14 @@ body{
 
     .login-input, .login-button{
         width: 50% !important;
+    }
+
+    .landing-image{
+        display: none;
+    }
+
+    .home-container-2{
+        width: 100%;
     }
 }
 
