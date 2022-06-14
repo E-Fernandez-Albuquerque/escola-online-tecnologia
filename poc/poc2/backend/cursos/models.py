@@ -54,11 +54,11 @@ class CourseLesson(models.Model):
 
 
 class CoursePosts(models.Model):
-    id = models.IntegerField(primary_key=True)
+    id = models.AutoField(primary_key=True)
     author = models.ForeignKey(User, related_name='comment', on_delete=models.CASCADE)
     course = models.ForeignKey(Course, related_name='comment', on_delete=models.CASCADE)
     text = models.TextField()
-    date = models.DateTimeField(default=datetime.now)
+    date = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
         return self.text
