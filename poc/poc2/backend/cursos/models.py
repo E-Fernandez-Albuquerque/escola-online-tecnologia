@@ -58,7 +58,7 @@ class CoursePosts(models.Model):
     author = models.ForeignKey(User, related_name='comment', on_delete=models.CASCADE)
     course = models.ForeignKey(Course, related_name='comment', on_delete=models.CASCADE)
     text = models.TextField()
-    date = models.DateTimeField(auto_now_add=True)
+    date = models.DateTimeField(default=datetime.now)
 
     def __str__(self):
         return self.text

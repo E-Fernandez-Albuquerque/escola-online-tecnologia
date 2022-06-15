@@ -29,19 +29,31 @@
 
         <div class="comment-add">
             <div class="comment-add-title">
-                <h3>Adicionar comentário</h3>
+                <img class='comment-icon' src="{% static "images" %}/icons/add-comment.png">
+                <h2>Adicionar comentário</h2>
             </div>
             <div class="comment-content">
                 <form method="POST">
                     {% csrf_token %}
                     <div class="comment-field">
-                        <input type="text" name="text">
+                        <textarea class='text' name="text" rows="4" cols="50"></textarea>
                         <input type="hidden" name="author" value="{{ request.user.id }}">
                         <input type="hidden" name="course" value="{{ course.id }}">
-                        <input type='submit' value="Postar">
+                        <div class="submit-button">
+                            <input class='button btn-post' type='submit' value="Postar">
+                        </div>
+                        
                     </div>
                 </form>
             </div>
+        </div>
+
+        <div class="comments-title">
+            <div class="comments-title-2">
+                <img class='comment-icon' src="{% static "images" %}/icons/comments.png">
+                <h2>Comentários do curso: {{ course.comment.count }}</h2> 
+            </div>
+            
         </div>
         
         {% for comment in object.comment.all %}
