@@ -13,7 +13,7 @@ from rest_framework import status
 from rest_framework.views import APIView
 from rest_framework.response import Response
 
-from .models import Course
+from .models import Course, CourseLesson
 from .forms import PostForm
 
 from django.views.generic.list import ListView
@@ -27,14 +27,18 @@ class CoursesView(ListView):
 
 class CourseDetailView(DetailView):
     model = Course
+    slug_field = 'course_slug'
+    slug_url_kwarg = 'course_slug'
 
 class CourseMuralDetailView(FormMixin, DetailView):
     model = Course
     template_name = 'cursos/course_mural.html'
     form_class = PostForm
+    slug_field = 'course_slug'
+    slug_url_kwarg = 'course_slug'
 
     def get_success_url(self):
-        return '/cursos'
+        return reverse('cursos:course_mural', kwargs=self.kwargs)
 
     def post(self, request, *args, **kwargs):
         self.object = self.get_object()
@@ -47,3 +51,10 @@ class CourseMuralDetailView(FormMixin, DetailView):
     def form_valid(self, form):
         form.save()
         return super(CourseMuralDetailView, self).form_valid(form)
+
+
+class CourseLessonDetailView(DetailView):
+    model = CourseLesson
+    template_name='cursos/course_lesson.html'
+    slug_field = 'lesson_slug'
+    slug_url_kwarg = 'lesson_slug'
