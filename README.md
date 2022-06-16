@@ -15,11 +15,16 @@
 
 | **Front-end** | **Back-end** | **Bancos de dados** |
 | :-----------: | :----------: | :-----------------: |
-|    Angular    |    Django    |       MongoDB       |
-|   Bootstrap   |              |   MySQL / MariaDB   |
+|     React     |    Django    |   MySQL / MariaDB   |
+|   Bootstrap   |              |                     |
+|   HTML, CSS   |              |                     |
 
 
 
 ### Apresentação da Prova de Conceito: 
 
 https://www.canva.com/design/DAFBJ-EwkME/wAOmtUCjZTpaSCdr9V-wWw/edit?utm_content=DAFBJ-EwkME&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
+
+Deployado em: https://glacial-brushlands-20591.herokuapp.com
+
+Projeto atual sendo atualizado em: /poc/poc2
