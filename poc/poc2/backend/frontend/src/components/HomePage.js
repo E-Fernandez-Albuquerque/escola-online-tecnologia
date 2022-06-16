@@ -34,7 +34,7 @@ export default class HomePage extends Component {
     render() {
         return (
             <>
-                <Menu></Menu>
+                {/* <Menu></Menu> */}
                 <Router>
                     <Switch>
                         <Route exact path="/" render={() => {

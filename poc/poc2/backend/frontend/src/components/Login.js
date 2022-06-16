@@ -58,6 +58,6 @@ export default class Login extends Component {
             }),
           };
         fetch('/user/login', requestOptions)
-        .then(() => this.props.history.push('/'))
+        .then(() => this.props.history.push('/')).then(() => location.reload())
     }
 }

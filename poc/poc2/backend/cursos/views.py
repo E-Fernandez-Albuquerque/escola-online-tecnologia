@@ -14,7 +14,7 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 
 from .models import Course, CourseLesson
-from .forms import PostForm
+from .forms import PostForm, LessonPostForm
 
 from django.views.generic.list import ListView
 from django.views.generic.detail import DetailView
@@ -53,8 +53,24 @@ class CourseMuralDetailView(FormMixin, DetailView):
         return super(CourseMuralDetailView, self).form_valid(form)
 
 
-class CourseLessonDetailView(DetailView):
+class CourseLessonDetailView(FormMixin, DetailView):
     model = CourseLesson
     template_name='cursos/course_lesson.html'
+    form_class = LessonPostForm
     slug_field = 'lesson_slug'
     slug_url_kwarg = 'lesson_slug'
+
+    def get_success_url(self):
+        return reverse('cursos:course_lesson', kwargs=self.kwargs)
+
+    def post(self, request, *args, **kwargs):
+        self.object = self.get_object()
+        form = self.get_form()
+        if form.is_valid():
+            return self.form_valid(form)
+        else:
+            return self.form_invalid(form)
+
+    def form_valid(self, form):
+        form.save()
+        return super(CourseLessonDetailView, self).form_valid(form)
