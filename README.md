@@ -27,6 +27,4 @@ https://www.canva.com/design/DAFBJ-EwkME/wAOmtUCjZTpaSCdr9V-wWw/edit?utm_content
 
 Deployado em: https://secret-sea-70972.herokuapp.com/
 
-Repositório deployado: https://github.com/E-Fernandez-Albuquerque/Projeto_Bad_Request
-
-Projeto atual sendo atualizado em: /poc/poc2
+Repositório atual: https://github.com/E-Fernandez-Albuquerque/Projeto_Bad_Request
