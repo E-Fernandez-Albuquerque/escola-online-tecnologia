@@ -64,6 +64,7 @@
     width: 90%;
     text-align: justify;
     text-indent: 5%;
+    word-wrap: break-word;
 }
 
 .comment-date{

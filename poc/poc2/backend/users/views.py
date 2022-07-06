@@ -94,5 +94,10 @@ class AccountCreateView(APIView):
             else:
                 user = User.objects.create_user(username=username, email=email, password=password)
                 user.save()
+                user = authenticate(username=username, password=password)
+
+                if user is not None:
+                    if user.is_active:
+                        login(request, user)
                 return Response({'created', 'Usuário criado com sucesso'}, status=status.HTTP_201_CREATED)
         return Response({'Bad request': 'Dados inválidos'}, status=status.HTTP_400_BAD_REQUEST)

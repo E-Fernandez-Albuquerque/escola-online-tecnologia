@@ -51,6 +51,15 @@
     text-decoration: none;
 }
 
+.course-total-description{
+    max-width: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .course-total-description h4{
     font-family: 'Fresca', sans-serif;   
     font-size: 18px;
@@ -59,6 +68,9 @@
 
 .course-total-description p{
     text-align: justify;
+    word-wrap: break-word;
+    width: 90%;
+    max-width: 90%;
 }
 
 

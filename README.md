@@ -25,6 +25,8 @@
 
 https://www.canva.com/design/DAFBJ-EwkME/wAOmtUCjZTpaSCdr9V-wWw/edit?utm_content=DAFBJ-EwkME&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
 
-Deployado em: https://glacial-brushlands-20591.herokuapp.com
+Deployado em: https://secret-sea-70972.herokuapp.com/
+
+Repositório deployado: https://github.com/E-Fernandez-Albuquerque/Projeto_Bad_Request
 
 Projeto atual sendo atualizado em: /poc/poc2

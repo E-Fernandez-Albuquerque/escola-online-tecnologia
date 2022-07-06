@@ -3,3 +3,15 @@
     flex-direction: column;
     width: 50%;
 }
+
+.lesson-title h2{
+    padding: 10px 15px;
+}
+
+video{
+    max-width: 100%;
+}
+
+.lesson-container{
+    max-width: 100%;
+}

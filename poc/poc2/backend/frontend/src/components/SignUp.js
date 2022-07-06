@@ -79,6 +79,6 @@ export default class SignUp extends Component {
             }),
           };
         fetch('/user/cadastro', requestOptions)
-        .then(() => this.props.history.push('/')) 
+        .then(() => this.props.history.push('/')) .then(() => location.reload())
     }
 }
